@@ -1,11 +1,11 @@
-##SUBQUERY AGGREGATE FUNCTION
+	SUBQUERY AGGREGATE FUNCTION
 SELECT ProjectID, ProjectName, MaxHours
 FROM Project
 WHERE MaxHours >
-	(SELECT AVG (MaxHours)
-	FROM PROJECT
-	WHERE ProjectID = I.ProjectID
-   FINAL QUERY
+(SELECT AVG (MaxHours)
+FROM PROJECT
+WHERE ProjectID = I.ProjectID
+  	 FINAL QUERY
 SELECT ProjectID, ProjectName, MaxHours
 FROM Project
 WHERE MaxHours >
